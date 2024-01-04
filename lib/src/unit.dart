@@ -68,6 +68,8 @@ class Unit extends Equatable {
 
   Unit get toAstronomicalUnit => convertTo(Units.astronomicalUnit);
 
+  Unit get toKilometre => convertTo(Units.kilometre);
+
   Unit get toMetre => convertTo(Units.metre);
 
   Unit get toCentimetre => convertTo(Units.centimetre);

@@ -13,6 +13,10 @@ void main() {
     test('convertTo() from lower to upper', () {
       final a = Unit.kilometre(149597870.7);
       expect(
+        a.toKilometre,
+        a,
+      );
+      expect(
         a.toAstronomicalUnit,
         Unit.astronomicalUnit(1),
       );
@@ -35,6 +39,75 @@ void main() {
       expect(
         a.toGigaparsec,
         Unit.gigaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000 / 1000),
+      );
+    });
+
+    test('convertTo() from upper to lower', () {
+      final a = Unit.gigaparsec(1);
+      expect(
+        a.toGigaparsec,
+        a,
+      );
+      expect(
+        a.toMegaparsec,
+        Unit.megaparsec(1 * 1000),
+      );
+      expect(
+        a.toKiloparsec,
+        Unit.kiloparsec(1 * 1000 * 1000),
+      );
+      expect(
+        a.toParsec,
+        Unit.parsec(1 * 1000 * 1000 * 1000),
+      );
+      expect(
+        a.toLightYear,
+        Unit.lightYear(1 * 1000 * 1000 * 1000 * 3.26156377716),
+      );
+      expect(
+        a.toAstronomicalUnit,
+        Unit.astronomicalUnit(1 * 1000 * 1000 * 1000 * 3.26156377716 * 63241.1),
+      );
+      expect(
+        a.toKilometre,
+        Unit.kilometre(
+            1 * 1000 * 1000 * 1000 * 3.26156377716 * 63241.1 * 149597870.7),
+      );
+      expect(
+        a.toMetre,
+        Unit.metre(1 *
+            1000 *
+            1000 *
+            1000 *
+            3.26156377716 *
+            63241.1 *
+            149597870.7 *
+            1000),
+      );
+      expect(
+        a.toCentimetre,
+        Unit.centimetre(1 *
+            1000 *
+            1000 *
+            1000 *
+            3.26156377716 *
+            63241.1 *
+            149597870.7 *
+            1000 *
+            100),
+      );
+      expect(
+        a.toMillimetre,
+        Unit.millimetre(1 *
+            1000 *
+            1000 *
+            1000 *
+            3.26156377716 *
+            63241.1 *
+            149597870.7 *
+            1000 *
+            100 *
+            10),
       );
     });
 
