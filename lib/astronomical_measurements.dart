@@ -2,4 +2,4 @@ library;
 
 export 'src/distance.dart';
 export 'src/unit.dart';
-export 'src/units.dart';
+export 'src/unit_type.dart';

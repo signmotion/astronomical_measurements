@@ -1,4 +1,4 @@
-enum Units implements Comparable<Units> {
+enum UnitType implements Comparable<UnitType> {
   undefinedUpper('undefinedUpper', 0.0),
   // distance
   gigaparsec('Gpc', -1),
@@ -15,13 +15,13 @@ enum Units implements Comparable<Units> {
   undefinedLower('undefinedLower', -1),
   ;
 
-  const Units(this.shortName, this.ratiosToUpper);
+  const UnitType(this.shortName, this.ratiosToUpper);
 
   final String shortName;
   final double ratiosToUpper;
 
   @override
-  int compareTo(Units other) => index.compareTo(other.index);
+  int compareTo(UnitType other) => index.compareTo(other.index);
 
   @override
   String toString() => shortName;

@@ -1,55 +1,55 @@
 import 'package:equatable/equatable.dart';
 
-import 'units.dart';
+import 'unit_type.dart';
 
 class Unit extends Equatable {
   final double value;
-  final Units unit;
+  final UnitType unit;
 
   const Unit(this.value, this.unit);
 
-  factory Unit.gigaparsec(double value) => Unit(value, Units.gigaparsec);
+  factory Unit.gigaparsec(double value) => Unit(value, UnitType.gigaparsec);
 
-  factory Unit.megaparsec(double value) => Unit(value, Units.megaparsec);
+  factory Unit.megaparsec(double value) => Unit(value, UnitType.megaparsec);
 
-  factory Unit.kiloparsec(double value) => Unit(value, Units.kiloparsec);
+  factory Unit.kiloparsec(double value) => Unit(value, UnitType.kiloparsec);
 
-  factory Unit.parsec(double value) => Unit(value, Units.parsec);
+  factory Unit.parsec(double value) => Unit(value, UnitType.parsec);
 
-  factory Unit.lightYear(double value) => Unit(value, Units.lightYear);
+  factory Unit.lightYear(double value) => Unit(value, UnitType.lightYear);
 
   factory Unit.astronomicalUnit(double value) =>
-      Unit(value, Units.astronomicalUnit);
+      Unit(value, UnitType.astronomicalUnit);
 
-  factory Unit.kilometre(double value) => Unit(value, Units.kilometre);
+  factory Unit.kilometre(double value) => Unit(value, UnitType.kilometre);
 
-  factory Unit.metre(double value) => Unit(value, Units.metre);
+  factory Unit.metre(double value) => Unit(value, UnitType.metre);
 
-  factory Unit.centimetre(double value) => Unit(value, Units.centimetre);
+  factory Unit.centimetre(double value) => Unit(value, UnitType.centimetre);
 
-  factory Unit.millimetre(double value) => Unit(value, Units.millimetre);
+  factory Unit.millimetre(double value) => Unit(value, UnitType.millimetre);
 
-  Unit get toGigaparsec => convertTo(Units.gigaparsec);
+  Unit get toGigaparsec => convertTo(UnitType.gigaparsec);
 
-  Unit get toMegaparsec => convertTo(Units.megaparsec);
+  Unit get toMegaparsec => convertTo(UnitType.megaparsec);
 
-  Unit get toKiloparsec => convertTo(Units.kiloparsec);
+  Unit get toKiloparsec => convertTo(UnitType.kiloparsec);
 
-  Unit get toParsec => convertTo(Units.parsec);
+  Unit get toParsec => convertTo(UnitType.parsec);
 
-  Unit get toLightYear => convertTo(Units.lightYear);
+  Unit get toLightYear => convertTo(UnitType.lightYear);
 
-  Unit get toAstronomicalUnit => convertTo(Units.astronomicalUnit);
+  Unit get toAstronomicalUnit => convertTo(UnitType.astronomicalUnit);
 
-  Unit get toKilometre => convertTo(Units.kilometre);
+  Unit get toKilometre => convertTo(UnitType.kilometre);
 
-  Unit get toMetre => convertTo(Units.metre);
+  Unit get toMetre => convertTo(UnitType.metre);
 
-  Unit get toCentimetre => convertTo(Units.centimetre);
+  Unit get toCentimetre => convertTo(UnitType.centimetre);
 
-  Unit get toMillimetre => convertTo(Units.millimetre);
+  Unit get toMillimetre => convertTo(UnitType.millimetre);
 
-  Unit convertTo(Units other) {
+  Unit convertTo(UnitType other) {
     if (unit == other) {
       return this;
     }
@@ -59,9 +59,9 @@ class Unit extends Equatable {
     if (other.index > unit.index) {
       // from upper to lower
       for (var i = unit.index + 1;
-          i != other.index + 1 && i != Units.undefinedLower.index;
+          i != other.index + 1 && i != UnitType.undefinedLower.index;
           ++i) {
-        final next = Units.values[i];
+        final next = UnitType.values[i];
         if (next.ratiosToUpper != -1) {
           r *= next.ratiosToUpper;
         }
@@ -69,9 +69,9 @@ class Unit extends Equatable {
     } else {
       // from lower to upper
       for (var i = unit.index;
-          i != other.index && i != Units.undefinedUpper.index;
+          i != other.index && i != UnitType.undefinedUpper.index;
           --i) {
-        final prev = Units.values[i];
+        final prev = UnitType.values[i];
         r /= prev.ratiosToUpper;
       }
     }

@@ -3,10 +3,10 @@ import 'dart:collection';
 import 'package:astronomical_measurements/src/unit.dart';
 import 'package:equatable/equatable.dart';
 
-import 'units.dart';
+import 'unit_type.dart';
 
 class Distance extends Equatable {
-  final SplayTreeMap<Units, double> mapped;
+  final SplayTreeMap<UnitType, double> mapped;
 
   set units(List<Unit> l) {
     for (final u in l) {
@@ -19,13 +19,13 @@ class Distance extends Equatable {
   List<Unit> get units =>
       mapped.entries.map((e) => Unit(e.value, e.key)).toList();
 
-  Distance(List<Unit> units) : mapped = SplayTreeMap<Units, double>() {
+  Distance(List<Unit> units) : mapped = SplayTreeMap<UnitType, double>() {
     this.units = units;
   }
 
   const Distance.fromMap(this.mapped);
 
-  Distance.empty() : mapped = SplayTreeMap<Units, double>();
+  Distance.empty() : mapped = SplayTreeMap<UnitType, double>();
 
   factory Distance.gigaparsecs(double value) =>
       Distance([Unit.gigaparsec(value)]);
@@ -56,7 +56,7 @@ class Distance extends Equatable {
       Distance([Unit.millimetre(value)]);
 
   Distance operator +(Distance other) {
-    final r = SplayTreeMap<Units, double>.from(mapped);
+    final r = SplayTreeMap<UnitType, double>.from(mapped);
     for (final oe in other.mapped.entries) {
       if (!r.containsKey(oe.key)) {
         r[oe.key] = 0.0;
@@ -70,7 +70,7 @@ class Distance extends Equatable {
   }
 
   Distance operator -(Distance other) {
-    final r = SplayTreeMap<Units, double>.from(mapped);
+    final r = SplayTreeMap<UnitType, double>.from(mapped);
     for (final oe in other.mapped.entries) {
       if (!r.containsKey(oe.key)) {
         r[oe.key] = 0.0;
@@ -84,7 +84,7 @@ class Distance extends Equatable {
   }
 
   Distance operator -() {
-    final r = SplayTreeMap<Units, double>.from(mapped);
+    final r = SplayTreeMap<UnitType, double>.from(mapped);
     for (final oe in r.entries) {
       r[oe.key] = -oe.value;
     }
