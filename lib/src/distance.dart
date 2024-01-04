@@ -1,24 +1,11 @@
 import 'dart:collection';
 
-import 'package:astronomical_measurements/src/unit.dart';
 import 'package:equatable/equatable.dart';
 
+import 'unit.dart';
 import 'unit_type.dart';
 
 class Distance extends Equatable {
-  final SplayTreeMap<UnitType, double> mapped;
-
-  set units(List<Unit> l) {
-    for (final u in l) {
-      if (u.value != 0.0) {
-        mapped[u.unit] = u.value;
-      }
-    }
-  }
-
-  List<Unit> get units =>
-      mapped.entries.map((e) => Unit(e.value, e.key)).toList();
-
   Distance(List<Unit> units) : mapped = SplayTreeMap<UnitType, double>() {
     this.units = units;
   }
@@ -54,6 +41,18 @@ class Distance extends Equatable {
 
   factory Distance.millimetres(double value) =>
       Distance([Unit.millimetre(value)]);
+  final SplayTreeMap<UnitType, double> mapped;
+
+  set units(List<Unit> l) {
+    for (final u in l) {
+      if (u.value != 0.0) {
+        mapped[u.type] = u.value;
+      }
+    }
+  }
+
+  List<Unit> get units =>
+      mapped.entries.map((e) => Unit(e.value, e.key)).toList();
 
   Distance operator +(Distance other) {
     final r = SplayTreeMap<UnitType, double>.from(mapped);

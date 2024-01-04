@@ -3,10 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'unit_type.dart';
 
 class Unit extends Equatable {
-  final double value;
-  final UnitType unit;
-
-  const Unit(this.value, this.unit);
+  const Unit(this.value, this.type);
 
   factory Unit.gigaparsec(double value) => Unit(value, UnitType.gigaparsec);
 
@@ -29,6 +26,9 @@ class Unit extends Equatable {
 
   factory Unit.millimetre(double value) => Unit(value, UnitType.millimetre);
 
+  final double value;
+  final UnitType type;
+
   Unit get toGigaparsec => convertTo(UnitType.gigaparsec);
 
   Unit get toMegaparsec => convertTo(UnitType.megaparsec);
@@ -50,50 +50,60 @@ class Unit extends Equatable {
   Unit get toMillimetre => convertTo(UnitType.millimetre);
 
   Unit convertTo(UnitType other) {
-    if (unit == other) {
+    if (type == other) {
       return this;
     }
 
-    var r = value;
-
-    if (other.index > unit.index) {
-      // from upper to lower
-      for (var i = unit.index + 1;
-          i != other.index + 1 && i != UnitType.undefinedLower.index;
-          ++i) {
-        final next = UnitType.values[i];
-        if (next.ratiosToUpper != -1) {
-          r *= next.ratiosToUpper;
-        }
-      }
-    } else {
-      // from lower to upper
-      for (var i = unit.index;
-          i != other.index && i != UnitType.undefinedUpper.index;
-          --i) {
-        final prev = UnitType.values[i];
-        r /= prev.ratiosToUpper;
-      }
-    }
+    final r = other.index > type.index
+        ? _upperToLower(other.index)
+        : _lowerToUpper(other.index);
 
     return Unit(r, other);
   }
 
+  double _upperToLower(int index) {
+    var r = value;
+    for (var i = type.index + 1;
+        i != index + 1 && i != UnitType.undefinedLower.index;
+        ++i) {
+      final next = UnitType.values[i];
+      if (next.ratiosToUpper == -1) {
+        throw Exception('A type out of bound.');
+      }
+
+      r *= next.ratiosToUpper;
+    }
+
+    return r;
+  }
+
+  double _lowerToUpper(int index) {
+    var r = value;
+    for (var i = type.index;
+        i != index && i != UnitType.undefinedUpper.index;
+        --i) {
+      final prev = UnitType.values[i];
+      r /= prev.ratiosToUpper;
+    }
+
+    return r;
+  }
+
   Unit operator +(Unit other) {
-    final converted = other.convertTo(unit);
-    return Unit(value + converted.value, unit);
+    final converted = other.convertTo(type);
+    return Unit(value + converted.value, type);
   }
 
   Unit operator -(Unit other) {
-    final converted = other.convertTo(unit);
-    return Unit(value - converted.value, unit);
+    final converted = other.convertTo(type);
+    return Unit(value - converted.value, type);
   }
 
-  Unit operator -() => Unit(-value, unit);
+  Unit operator -() => Unit(-value, type);
 
   @override
-  List<Object?> get props => [value, unit];
+  List<Object?> get props => [value, type];
 
   @override
-  String toString() => '$value $unit';
+  String toString() => '$value $type';
 }
