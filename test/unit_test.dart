@@ -12,15 +12,30 @@ void main() {
 
     test('convertTo() from lower to upper', () {
       final a = Unit.kilometre(149597870.7);
-      expect(a.toAstronomicalUnit, Unit.astronomicalUnit(1));
-      expect(a.toLightYear, Unit.lightYear(1 / 63241.1));
-      expect(a.toParsec, Unit.parsec(1 / 63241.1 / 3.26156377716));
       expect(
-          a.toKiloparsec, Unit.kiloparsec(1 / 63241.1 / 3.26156377716 / 1000));
-      expect(a.toMegaparsec,
-          Unit.megaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000));
-      expect(a.toGigaparsec,
-          Unit.gigaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000 / 1000));
+        a.toAstronomicalUnit,
+        Unit.astronomicalUnit(1),
+      );
+      expect(
+        a.toLightYear,
+        Unit.lightYear(1 / 63241.1),
+      );
+      expect(
+        a.toParsec,
+        Unit.parsec(1 / 63241.1 / 3.26156377716),
+      );
+      expect(
+        a.toKiloparsec,
+        Unit.kiloparsec(1 / 63241.1 / 3.26156377716 / 1000),
+      );
+      expect(
+        a.toMegaparsec,
+        Unit.megaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000),
+      );
+      expect(
+        a.toGigaparsec,
+        Unit.gigaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000 / 1000),
+      );
     });
 
     test('operator +(other)', () {
