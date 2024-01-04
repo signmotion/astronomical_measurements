@@ -3,6 +3,8 @@ import 'dart:collection';
 import 'package:astronomical_measurements/src/unit.dart';
 import 'package:equatable/equatable.dart';
 
+import 'units.dart';
+
 class Distance extends Equatable {
   final SplayTreeMap<Units, double> mapped;
 
