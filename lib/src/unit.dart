@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:equatable/equatable.dart';
 
 import 'unit_type.dart';
@@ -100,7 +102,13 @@ class Unit extends Equatable {
 
   Unit floor() => Unit(value.floorToDouble(), type, equalsPlaces: equalsPlaces);
 
-  Unit round() => Unit(value.roundToDouble(), type, equalsPlaces: equalsPlaces);
+  Unit round([int decimalPlaces = 0]) =>
+      Unit(_round(value, decimalPlaces), type, equalsPlaces: equalsPlaces);
+
+  /// Copied from `dart_helpers` package.
+  double _round(double x, [int decimalPlaces = 0]) => decimalPlaces == 0
+      ? x.roundToDouble()
+      : (x * pow(10, decimalPlaces)).roundToDouble() / pow(10, decimalPlaces);
 
   Unit operator +(Unit other) {
     final converted = other.convertTo(type);
@@ -122,8 +130,7 @@ class Unit extends Equatable {
 
     final converted = other.convertTo(type);
 
-    return converted.value.toStringAsFixed(equalsPlaces) ==
-        value.toStringAsFixed(equalsPlaces);
+    return _round(converted.value, equalsPlaces) == _round(value, equalsPlaces);
   }
 
   @override
