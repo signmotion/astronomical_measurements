@@ -96,6 +96,12 @@ class Unit extends Equatable {
     return r;
   }
 
+  Unit ceil() => Unit(value.ceilToDouble(), type, equalsPlaces: equalsPlaces);
+
+  Unit floor() => Unit(value.floorToDouble(), type, equalsPlaces: equalsPlaces);
+
+  Unit round() => Unit(value.roundToDouble(), type, equalsPlaces: equalsPlaces);
+
   Unit operator +(Unit other) {
     final converted = other.convertTo(type);
     return Unit(value + converted.value, type);
