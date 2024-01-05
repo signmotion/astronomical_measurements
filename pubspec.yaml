@@ -13,9 +13,6 @@ environment:
   sdk: ">=3.2.3"
 
 dependencies:
-  dart_helpers:
-    path: ../dart_helpers
-
   equatable: ^2.0.5
 
 dev_dependencies:

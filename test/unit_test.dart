@@ -1,5 +1,4 @@
 import 'package:astronomical_measurements/astronomical_measurements.dart';
-import 'package:dart_helpers/dart_helpers.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -21,62 +20,26 @@ void main() {
         a.toAstronomicalUnit,
         Unit.astronomicalUnit(1),
       );
-
-      const epsilon = 0.00000000000000000001;
-
-      {
-        final actual = a.toLightYear.value;
-        final expected = Unit.lightYear(1 / 63241.1).value;
-        expect(
-          actual.isNear(expected, epsilon),
-          true,
-          reason: '$actual != $expected',
-        );
-      }
-
-      {
-        final actual = a.toParsec.value;
-        final expected = Unit.parsec(1 / 63241.1 / 3.26156377716).value;
-        expect(
-          actual.isNear(expected, epsilon),
-          true,
-          reason: '$actual != $expected',
-        );
-      }
-
-      {
-        final actual = a.toKiloparsec.value;
-        final expected =
-            Unit.kiloparsec(1 / 63241.1 / 3.26156377716 / 1000).value;
-        expect(
-          actual.isNear(expected, epsilon),
-          true,
-          reason: '$actual != $expected',
-        );
-      }
-
-      {
-        final actual = a.toMegaparsec.value;
-        final expected =
-            Unit.megaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000).value;
-        expect(
-          actual.isNear(expected, epsilon),
-          true,
-          reason: '$actual != $expected',
-        );
-      }
-
-      {
-        final actual = a.toGigaparsec.value;
-        final expected =
-            Unit.gigaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000 / 1000)
-                .value;
-        expect(
-          actual.isNear(expected, epsilon),
-          true,
-          reason: '$actual != $expected',
-        );
-      }
+      expect(
+        a.toLightYear,
+        Unit.lightYear(1 / 63241.1),
+      );
+      expect(
+        a.toParsec,
+        Unit.parsec(1 / 63241.1 / 3.26156377716),
+      );
+      expect(
+        a.toKiloparsec,
+        Unit.kiloparsec(1 / 63241.1 / 3.26156377716 / 1000),
+      );
+      expect(
+        a.toMegaparsec,
+        Unit.megaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000),
+      );
+      expect(
+        a.toGigaparsec,
+        Unit.gigaparsec(1 / 63241.1 / 3.26156377716 / 1000 / 1000 / 1000),
+      );
     });
 
     test('convertTo() from upper to lower', () {

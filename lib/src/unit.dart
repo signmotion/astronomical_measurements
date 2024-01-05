@@ -3,7 +3,11 @@ import 'package:equatable/equatable.dart';
 import 'unit_type.dart';
 
 class Unit extends Equatable {
-  const Unit(this.value, this.type);
+  const Unit(
+    this.value,
+    this.type, {
+    this.equalsPlaces = 19,
+  });
 
   factory Unit.gigaparsec(double value) => Unit(value, UnitType.gigaparsec);
 
@@ -28,6 +32,9 @@ class Unit extends Equatable {
 
   final double value;
   final UnitType type;
+
+  /// Using for equals units by double values.
+  final int equalsPlaces;
 
   Unit get toGigaparsec => convertTo(UnitType.gigaparsec);
 
@@ -100,6 +107,22 @@ class Unit extends Equatable {
   }
 
   Unit operator -() => Unit(-value, type);
+
+  @override
+  bool operator ==(Object other) {
+    if (other is! Unit) {
+      return false;
+    }
+
+    final converted = other.convertTo(type);
+
+    return converted.value.toStringAsFixed(equalsPlaces) ==
+        value.toStringAsFixed(equalsPlaces);
+  }
+
+  @override
+  int get hashCode =>
+      value.toStringAsFixed(equalsPlaces).hashCode + 121 * type.hashCode;
 
   @override
   List<Object?> get props => [value, type];
