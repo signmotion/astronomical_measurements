@@ -26,6 +26,9 @@ enum UnitType implements Comparable<UnitType> {
   final String shortName;
   final double ratiosToUpper;
 
+  bool operator >(UnitType other) => compareTo(other) > 0;
+  bool operator <(UnitType other) => compareTo(other) < 0;
+
   @override
   int compareTo(UnitType other) => index.compareTo(other.index);
 
