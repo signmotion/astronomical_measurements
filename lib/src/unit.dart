@@ -11,26 +11,33 @@ class Unit extends Equatable {
     this.equalsDigits = 19,
   });
 
-  factory Unit.gigaparsec(double value) => Unit(value, UnitType.gigaparsec);
+  factory Unit.gigaparsec(num value) =>
+      Unit(value.toDouble(), UnitType.gigaparsec);
 
-  factory Unit.megaparsec(double value) => Unit(value, UnitType.megaparsec);
+  factory Unit.megaparsec(num value) =>
+      Unit(value.toDouble(), UnitType.megaparsec);
 
-  factory Unit.kiloparsec(double value) => Unit(value, UnitType.kiloparsec);
+  factory Unit.kiloparsec(num value) =>
+      Unit(value.toDouble(), UnitType.kiloparsec);
 
-  factory Unit.parsec(double value) => Unit(value, UnitType.parsec);
+  factory Unit.parsec(num value) => Unit(value.toDouble(), UnitType.parsec);
 
-  factory Unit.lightYear(double value) => Unit(value, UnitType.lightYear);
+  factory Unit.lightYear(num value) =>
+      Unit(value.toDouble(), UnitType.lightYear);
 
-  factory Unit.astronomicalUnit(double value) =>
-      Unit(value, UnitType.astronomicalUnit);
+  factory Unit.astronomicalUnit(num value) =>
+      Unit(value.toDouble(), UnitType.astronomicalUnit);
 
-  factory Unit.kilometre(double value) => Unit(value, UnitType.kilometre);
+  factory Unit.kilometre(num value) =>
+      Unit(value.toDouble(), UnitType.kilometre);
 
-  factory Unit.metre(double value) => Unit(value, UnitType.metre);
+  factory Unit.metre(num value) => Unit(value.toDouble(), UnitType.metre);
 
-  factory Unit.centimetre(double value) => Unit(value, UnitType.centimetre);
+  factory Unit.centimetre(num value) =>
+      Unit(value.toDouble(), UnitType.centimetre);
 
-  factory Unit.millimetre(double value) => Unit(value, UnitType.millimetre);
+  factory Unit.millimetre(num value) =>
+      Unit(value.toDouble(), UnitType.millimetre);
 
   final double value;
   final UnitType type;
