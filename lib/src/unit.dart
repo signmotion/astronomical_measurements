@@ -135,7 +135,7 @@ class Unit extends Equatable {
 
   @override
   int get hashCode =>
-      value.toStringAsFixed(equalsPlaces).hashCode + 121 * type.hashCode;
+      _round(value, equalsPlaces).hashCode + 121 * type.hashCode;
 
   @override
   List<Object?> get props => [value, type];
