@@ -8,7 +8,7 @@ class Unit extends Equatable {
   const Unit(
     this.value,
     this.type, {
-    this.equalsPlaces = 19,
+    this.equalsDigits = 19,
   });
 
   factory Unit.gigaparsec(double value) => Unit(value, UnitType.gigaparsec);
@@ -36,7 +36,7 @@ class Unit extends Equatable {
   final UnitType type;
 
   /// Using for equals units by double values.
-  final int equalsPlaces;
+  final int equalsDigits;
 
   Unit get toGigaparsec => convertTo(UnitType.gigaparsec);
 
@@ -64,13 +64,13 @@ class Unit extends Equatable {
     }
 
     final r = other.index > type.index
-        ? _upperToLower(other.index)
-        : _lowerToUpper(other.index);
+        ? _convertUpperToLower(other.index)
+        : _convertLowerToUpper(other.index);
 
-    return Unit(r, other);
+    return Unit(r, other, equalsDigits: equalsDigits);
   }
 
-  double _upperToLower(int index) {
+  double _convertUpperToLower(int index) {
     var r = value;
     for (var i = type.index + 1;
         i != index + 1 && i != UnitType.undefinedLower.index;
@@ -86,7 +86,7 @@ class Unit extends Equatable {
     return r;
   }
 
-  double _lowerToUpper(int index) {
+  double _convertLowerToUpper(int index) {
     var r = value;
     for (var i = type.index;
         i != index && i != UnitType.undefinedUpper.index;
@@ -98,44 +98,161 @@ class Unit extends Equatable {
     return r;
   }
 
-  Unit ceil() => Unit(value.ceilToDouble(), type, equalsPlaces: equalsPlaces);
+  Unit ceil() => Unit(
+        value.ceilToDouble(),
+        type,
+        equalsDigits: equalsDigits,
+      );
 
-  Unit floor() => Unit(value.floorToDouble(), type, equalsPlaces: equalsPlaces);
+  int ceilValue() => value.ceil();
 
-  Unit round([int decimalPlaces = 0]) =>
-      Unit(_round(value, decimalPlaces), type, equalsPlaces: equalsPlaces);
+  Unit floor() => Unit(
+        value.floorToDouble(),
+        type,
+        equalsDigits: equalsDigits,
+      );
+
+  int floorValue() => value.floor();
+
+  Unit round([int decimalPlaces = 0]) => Unit(
+        _round(value, decimalPlaces),
+        type,
+        equalsDigits: equalsDigits,
+      );
+
+  double roundValue([int decimalPlaces = 0]) => _round(value, decimalPlaces);
 
   /// Copied from `dart_helpers` package.
-  double _round(double x, [int decimalPlaces = 0]) => decimalPlaces == 0
-      ? x.roundToDouble()
-      : (x * pow(10, decimalPlaces)).roundToDouble() / pow(10, decimalPlaces);
+  double _round(num x, [int decimalPlaces = -1]) {
+    if (decimalPlaces == -1) {
+      decimalPlaces = equalsDigits;
+    }
 
-  Unit operator +(Unit other) {
-    final converted = other.convertTo(type);
-    return Unit(value + converted.value, type);
+    if (decimalPlaces == 0) {
+      return x.roundToDouble();
+    }
+
+    final p = pow(10, decimalPlaces);
+
+    return (x * p).roundToDouble() / p;
   }
 
-  Unit operator -(Unit other) {
-    final converted = other.convertTo(type);
-    return Unit(value - converted.value, type);
+  Unit operator +(Object other) {
+    if (other is num) {
+      return Unit(
+        value + other,
+        type,
+        equalsDigits: equalsDigits,
+      );
+    }
+
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return Unit(
+        value + converted.value,
+        type,
+        equalsDigits: equalsDigits,
+      );
+    }
+
+    throw Exception('Illegal value `$other` for this operator.');
   }
 
-  Unit operator -() => Unit(-value, type);
+  Unit operator -(Object other) {
+    if (other is num) {
+      return Unit(value - other, type, equalsDigits: equalsDigits);
+    }
+
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return Unit(
+        value - converted.value,
+        type,
+        equalsDigits: equalsDigits,
+      );
+    }
+
+    throw Exception('Illegal value `$other` for this operator.');
+  }
+
+  Unit operator -() => Unit(-value, type, equalsDigits: equalsDigits);
+
+  Unit operator *(Object other) {
+    if (other is num) {
+      return Unit(value * other, type, equalsDigits: equalsDigits);
+    }
+
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return Unit(
+        value * converted.value,
+        type,
+        equalsDigits: equalsDigits,
+      );
+    }
+
+    throw Exception('Illegal value `$other` for this operator.');
+  }
+
+  Unit operator /(Object other) {
+    if (other is num) {
+      return Unit(value / other, type, equalsDigits: equalsDigits);
+    }
+
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return Unit(
+        value / converted.value,
+        type,
+        equalsDigits: equalsDigits,
+      );
+    }
+
+    throw Exception('Illegal value `$other` for this operator.');
+  }
+
+  bool operator >(Object other) {
+    if (other is num) {
+      return _round(value) > _round(other);
+    }
+
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return _round(value) > _round(converted.value);
+    }
+
+    return false;
+  }
+
+  bool operator <(Object other) {
+    if (other is num) {
+      return _round(value) < _round(other);
+    }
+
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return _round(value) < _round(converted.value);
+    }
+
+    return false;
+  }
 
   @override
   bool operator ==(Object other) {
-    if (other is! Unit) {
-      return false;
+    if (other is num) {
+      return _round(value) == _round(other);
     }
 
-    final converted = other.convertTo(type);
+    if (other is Unit) {
+      final converted = other.convertTo(type);
+      return _round(value) == _round(converted.value);
+    }
 
-    return _round(converted.value, equalsPlaces) == _round(value, equalsPlaces);
+    return false;
   }
 
   @override
-  int get hashCode =>
-      _round(value, equalsPlaces).hashCode + 121 * type.hashCode;
+  int get hashCode => _round(value).hashCode + 121 * type.hashCode;
 
   @override
   List<Object?> get props => [value, type];
