@@ -1,8 +1,4 @@
-import 'dart:math';
-
-import 'package:equatable/equatable.dart';
-
-import 'unit_type.dart';
+part of '../astronomical_measurements.dart';
 
 class Unit extends Equatable {
   const Unit(

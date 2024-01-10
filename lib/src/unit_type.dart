@@ -1,3 +1,5 @@
+part of '../astronomical_measurements.dart';
+
 enum UnitType implements Comparable<UnitType> {
   undefinedUpper('undefinedUpper', 0.0),
   // distance

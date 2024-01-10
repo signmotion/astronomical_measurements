@@ -1,9 +1,4 @@
-import 'dart:collection';
-
-import 'package:equatable/equatable.dart';
-
-import 'unit.dart';
-import 'unit_type.dart';
+part of '../astronomical_measurements.dart';
 
 class Distance extends Equatable {
   Distance(List<Unit> units) : mapped = SplayTreeMap<UnitType, double>() {

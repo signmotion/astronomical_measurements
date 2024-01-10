@@ -1,5 +1,10 @@
 library;
 
-export 'src/distance.dart';
-export 'src/unit.dart';
-export 'src/unit_type.dart';
+import 'dart:collection';
+import 'dart:math' show pow;
+
+import 'package:equatable/equatable.dart';
+
+part 'src/distance.dart';
+part 'src/unit.dart';
+part 'src/unit_type.dart';
