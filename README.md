@@ -18,14 +18,14 @@ See folder `test` for the use cases.
 - megaparsec
 - kiloparsec
 - parsec
-- lightYear
-- millionAstronomicalUnit
-- thousandAstronomicalUnit
-- hundredAstronomicalUnit
-- astronomicalUnit
-- millionKilometre
-- thousandKilometre
-- hundredKilometre
+- light year
+- million astronomical units
+- thousand astronomical units
+- hundred astronomical units
+- astronomical unit
+- million kilometres
+- thousand kilometres
+- hundred kilometres
 - kilometre
 - metre
 - centimetre
