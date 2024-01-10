@@ -1,7 +1,8 @@
 part of '../astronomical_measurements.dart';
 
 enum UnitType implements Comparable<UnitType> {
-  undefinedUpper('undefinedUpper', 0.0),
+  undefined('undefined', double.nan),
+  undefinedUpper('undefinedUpper', double.infinity),
   // distance
   gigaparsec('Gpc', -1),
   megaparsec('Mpc', 1000),
@@ -20,7 +21,7 @@ enum UnitType implements Comparable<UnitType> {
   centimetre('cm', 100),
   millimetre('mm', 10),
   // TODO mass
-  undefinedLower('undefinedLower', -1),
+  undefinedLower('undefinedLower', double.negativeInfinity),
   ;
 
   const UnitType(this.shortName, this.ratiosToUpper);
