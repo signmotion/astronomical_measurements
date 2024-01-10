@@ -144,6 +144,8 @@ class Unit extends Equatable {
     return (x * p).roundToDouble() / p;
   }
 
+  double nepper(Unit other) => value / other.convertTo(type).value;
+
   Unit operator +(Object other) {
     if (other is num) {
       return Unit(
