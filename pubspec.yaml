@@ -1,6 +1,6 @@
 name: astronomical_measurements
 description: A library for work with astronomical measurements.
-publish_to: none
+repository: https://github.com/signmotion/astronomical_measurements.git
 
 # Format:
 #   version: major.minor.patch
@@ -10,7 +10,7 @@ publish_to: none
 version: 0.1.0
 
 environment:
-  sdk: ">=3.2.3"
+  sdk: ">=3.2.3 <4.0.0"
 
 dependencies:
   equatable: ^2.0.5
