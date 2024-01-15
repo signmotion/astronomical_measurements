@@ -1,5 +1,9 @@
 part of '../astronomical_measurements.dart';
 
+typedef Unit2 = (Unit, Unit);
+
+typedef Unit3 = (Unit, Unit, Unit);
+
 class Unit extends Equatable {
   const Unit(
     this.value,
@@ -34,6 +38,8 @@ class Unit extends Equatable {
 
   factory Unit.millimetre(num value) =>
       Unit(value.toDouble(), UnitType.millimetre);
+
+  static const undefined = Unit(double.nan, UnitType.undefined);
 
   final double value;
   final UnitType type;
@@ -122,6 +128,8 @@ class Unit extends Equatable {
         type,
         equalsDigits: equalsDigits,
       );
+
+  int roundIntValue() => value.round();
 
   double roundValue([int decimalPlaces = 0]) => _round(value, decimalPlaces);
 
