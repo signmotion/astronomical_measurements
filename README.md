@@ -1,6 +1,13 @@
 # Astronomical Measurements Library
 
-A library for work with astronomical measurements.
+![Cover - Astronomical Measurements](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/images/cover.webp)
+
+Keeping and converting astronomical measurements.
+Well-tested Dart package.
+
+## Usage
+
+### Converting
 
 ```dart
 final u = Unit.parsec(12);
@@ -8,7 +15,7 @@ print('$u = ${u.toLightYear} = ${u.toKilometre}');
 
 ```
 
-See folder `test` for the use cases.
+See also the folder `test` for the use cases.
 
 ## Supported Units
 
@@ -30,3 +37,7 @@ See folder `test` for the use cases.
 - metre
 - centimetre
 - millimetre
+
+## License
+
+[MIT](LICENSE)
