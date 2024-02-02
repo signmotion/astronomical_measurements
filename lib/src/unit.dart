@@ -4,6 +4,7 @@ typedef Unit2 = (Unit, Unit);
 
 typedef Unit3 = (Unit, Unit, Unit);
 
+/// The envelope for unit.
 class Unit extends Equatable {
   const Unit(
     this.value,
@@ -39,9 +40,13 @@ class Unit extends Equatable {
   factory Unit.millimetre(num value) =>
       Unit(value.toDouble(), UnitType.millimetre);
 
+  /// Undefined [Unit] for tests.
   static const undefined = Unit(double.nan, UnitType.undefined);
 
+  /// Value of [Unit].
   final double value;
+
+  /// Type of [Unit].
   final UnitType type;
 
   /// Using for equals units by double values.
@@ -67,6 +72,7 @@ class Unit extends Equatable {
 
   Unit get toMillimetre => convertTo(UnitType.millimetre);
 
+  /// Convert to another [Unit].
   Unit convertTo(UnitType other) {
     if (type == other) {
       return this;
@@ -107,6 +113,7 @@ class Unit extends Equatable {
     return r;
   }
 
+  /// Like [cell] from math.
   Unit ceil() => Unit(
         value.ceilToDouble(),
         type,
@@ -115,6 +122,7 @@ class Unit extends Equatable {
 
   int ceilValue() => value.ceil();
 
+  /// Like [floor] from math.
   Unit floor() => Unit(
         value.floorToDouble(),
         type,
@@ -123,6 +131,7 @@ class Unit extends Equatable {
 
   int floorValue() => value.floor();
 
+  /// Like [round] from math.
   Unit round([int decimalPlaces = 0]) => Unit(
         _round(value, decimalPlaces),
         type,
@@ -148,8 +157,10 @@ class Unit extends Equatable {
     return (x * p).roundToDouble() / p;
   }
 
+  /// The current [value] divided by the converted to same type [other].
   double nepper(Unit other) => value / other.convertTo(type).value;
 
+  /// [other] will be converted to current [type].
   Unit operator +(Object other) {
     if (other is num) {
       return Unit(
@@ -171,6 +182,7 @@ class Unit extends Equatable {
     throw Exception('Illegal value `$other` for this operator.');
   }
 
+  /// [other] will be converted to current [type].
   Unit operator -(Object other) {
     if (other is num) {
       return Unit(value - other, type, equalsDigits: equalsDigits);
@@ -190,6 +202,7 @@ class Unit extends Equatable {
 
   Unit operator -() => Unit(-value, type, equalsDigits: equalsDigits);
 
+  /// [other] will be converted to current [type].
   Unit operator *(Object other) {
     if (other is num) {
       return Unit(value * other, type, equalsDigits: equalsDigits);
@@ -207,6 +220,7 @@ class Unit extends Equatable {
     throw Exception('Illegal value `$other` for this operator.');
   }
 
+  /// [other] will be converted to current [type].
   Unit operator /(Object other) {
     if (other is num) {
       return Unit(value / other, type, equalsDigits: equalsDigits);
@@ -224,6 +238,7 @@ class Unit extends Equatable {
     throw Exception('Illegal value `$other` for this operator.');
   }
 
+  /// [other] will be converted to current [type].
   bool operator >(Object other) {
     if (other is num) {
       return _round(value) > _round(other);
@@ -237,6 +252,7 @@ class Unit extends Equatable {
     return false;
   }
 
+  /// [other] will be converted to current [type].
   bool operator <(Object other) {
     if (other is num) {
       return _round(value) < _round(other);
@@ -250,6 +266,7 @@ class Unit extends Equatable {
     return false;
   }
 
+  /// [other] will be converted to current [type].
   @override
   bool operator ==(Object other) {
     if (other is num) {

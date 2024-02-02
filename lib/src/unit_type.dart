@@ -1,5 +1,6 @@
 part of '../astronomical_measurements.dart';
 
+/// All defined types for [Unit].
 enum UnitType implements Comparable<UnitType> {
   undefined('undefined', double.nan),
   undefinedUpper('undefinedUpper', double.infinity),
