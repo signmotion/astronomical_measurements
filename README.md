@@ -2,8 +2,11 @@
 
 ![Cover - Astronomical Measurements](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/images/cover.webp)
 
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/LICENSE)
+
 Keeping and converting astronomical measurements.
-Well-tested Dart package.
+Easy-to-use and well-tested Dart package.
+Feel free to use it in your projects.
 
 ## Usage
 
@@ -13,6 +16,10 @@ Well-tested Dart package.
 final u = Unit.parsec(12);
 print('$u = ${u.toLightYear} = ${u.toKilometre}');
 
+```
+
+```text
+12.0 pc = 39.138765325920005 ly = 2475178.5718530393 au = 370281443951481.56 km
 ```
 
 See also the folder `test` for the use cases.
@@ -38,6 +45,17 @@ See also the folder `test` for the use cases.
 - centimetre
 - millimetre
 
-## License
+## Welcome
 
-[MIT](LICENSE)
+Requests and suggestions are warmly welcome.
+
+This package is open-source, stable and well-tested. Development happens on
+[GitHub](https://github.com/signmotion/astronomical_measurements). Feel free to report issues
+or create a pull-request there.
+
+General questions are best asked on
+[StackOverflow](https://stackoverflow.com/questions/tagged/astronomical_measurements).
+
+## TODO
+
+- A mass.
