@@ -3,6 +3,12 @@
 All notable changes to the project `AstronomicalMeasurements` will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.2
+
+- Decreased a cap for Dart SDK.
+- Provided a documentation.
+- Added `README` to example and updated the root `README`.
+
 ## 0.2.1
 
 - Added a cover to `README`.
