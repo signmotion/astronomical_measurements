@@ -21,7 +21,7 @@ enum UnitType implements Comparable<UnitType> {
   metre('m', 1000),
   centimetre('cm', 100),
   millimetre('mm', 10),
-  // TODO mass
+  // TODO(sign): mass
   undefinedLower('undefinedLower', double.negativeInfinity),
   ;
 

@@ -1,5 +1,6 @@
 part of '../astronomical_measurements.dart';
 
+/// For work with astronomical distances and sizes.
 class Distance extends Equatable {
   Distance(List<Unit> units) : mapped = SplayTreeMap<UnitType, double>() {
     this.units = units;

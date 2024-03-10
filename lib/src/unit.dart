@@ -138,8 +138,10 @@ class Unit extends Equatable {
         equalsDigits: equalsDigits,
       );
 
+  /// Rounded [int] value.
   int roundIntValue() => value.round();
 
+  /// Rounded to [decimalPlaces] value.
   double roundValue([int decimalPlaces = 0]) => _round(value, decimalPlaces);
 
   /// Copied from `dart_helpers` package.
