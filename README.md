@@ -2,11 +2,14 @@
 
 ![Cover - Astronomical Measurements](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/images/cover.webp)
 
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/LICENSE)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Pub Package](https://img.shields.io/badge/doc-astronomical_measurements-blue)](https://pub.dartlang.org/packages/astronomical_measurements)
+[![Build Status](https://github.com/signmotion/astronomical_measurements/actions/workflows/dart-ci.yml/badge.svg)](https://github.com/signmotion/astronomical_measurements/actions/workflows/dart-ci.yml)
+[![Publisher](https://img.shields.io/pub/publisher/astronomical_measurements)](https://pub.dev/publishers/syrokomskyi.com)
 
 Keeping and converting astronomical measurements.
 Easy-to-use and well-tested Dart package.
-Feel free to use it in your projects.
+Feel free to use it in your awesome projects.
 
 ## Usage
 
