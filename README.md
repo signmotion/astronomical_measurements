@@ -75,7 +75,7 @@ If this is your first contribution, I'll leave you with some of the best links I
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute). Longread for deep diving for first-timers and for veterans.
 - [Summer Guide from Google](https://youtu.be/qGTQ7dEZXZc).
 
-The package **IdGen** is open-source, stable and well-tested. Development happens on
+The package **AstronomicalMeasurements** is open-source, stable and well-tested. Development happens on
 [GitHub](https://github.com/signmotion/astronomical_measurements). Feel free to report issues
 or create a pull-request there.
 
@@ -92,7 +92,7 @@ And here is a curated list of how you can help:
 
 ## TODO (perhaps)
 
-Once you start using the **IdGen**, it will become easy to choose the functionality to contribute. But if you already get everything you need from this package but have some free time, let me write here what I have planned:
+Once you start using the **AstronomicalMeasurements**, it will become easy to choose the functionality to contribute. But if you already get everything you need from this package but have some free time, let me write here what I have planned:
 
 - A mass.
 
