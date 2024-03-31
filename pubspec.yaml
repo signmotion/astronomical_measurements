@@ -1,11 +1,12 @@
 name: astronomical_measurements
-description: The library for keeping and converting astronomical measurements.
+description: >-
+  The library for keeping and converting astronomical measurements.
+  Feel free to use it in your awesome projects.
 repository: https://github.com/signmotion/astronomical_measurements.git
-
 topics:
   - measurements
   - astronomical
-  - length
+  - lenght
   - distance
   - tools
 
@@ -14,7 +15,7 @@ topics:
 # You can calculate the number version code by this formula:
 #   code = m[A]jor * 100 * 100 + m[I]nor * 100 + [P]atch
 # Otherwise: +AAIIPP
-version: 0.2.3
+version: 0.2.4
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

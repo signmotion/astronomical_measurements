@@ -3,6 +3,12 @@
 All notable changes to the project `AstronomicalMeasurements` will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.4
+
+- Added a help for first-time contributor in `README`.
+- Provided supported platforms.
+- Included a link to tests from `README`.
+
 ## 0.2.3
 
 - Provided CI.
