@@ -3,28 +3,28 @@
 ![Cover - Astronomical Measurements](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/images/cover.webp)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Pub Package](https://img.shields.io/pub/v/id_gen.svg?logo=dart&logoColor=00b9fc&color=blue)](https://pub.dartlang.org/packages/id_gen)
-[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/id_gen?logo=github&logoColor=white)](https://github.com/signmotion/id_gen)
-[![Publisher](https://img.shields.io/pub/publisher/id_gen)](https://pub.dev/publishers/syrokomskyi.com)
+[![Pub Package](https://img.shields.io/pub/v/astronomical_measurements.svg?logo=dart&logoColor=00b9fc&color=blue)](https://pub.dartlang.org/packages/astronomical_measurements)
+[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements)
+[![Publisher](https://img.shields.io/pub/publisher/astronomical_measurements)](https://pub.dev/publishers/syrokomskyi.com)
 
-![SDK version](https://badgen.net/pub/sdk-version/id_gen)
-![Supported platforms](https://badgen.net/pub/flutter-platform/id_gen)
-![Supported SDKs](https://badgen.net/pub/dart-platform/id_gen)
+![SDK version](https://badgen.net/pub/sdk-version/astronomical_measurements)
+![Supported platforms](https://badgen.net/pub/flutter-platform/astronomical_measurements)
+![Supported SDKs](https://badgen.net/pub/dart-platform/astronomical_measurements)
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/id_gen/dart-ci.yml?logo=github-actions&logoColor=white)](https://github.com/signmotion/id_gen/actions)
-[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/id_gen?logo=github&logoColor=white)](https://github.com/signmotion/id_gen/pulls)
-[![Issues](https://img.shields.io/github/issues/signmotion/id_gen?logo=github&logoColor=white)](https://github.com/signmotion/id_gen/issues)
-[![Pub Score](https://img.shields.io/pub/points/id_gen?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/id_gen/score)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/astronomical_measurements/dart-ci.yml?logo=github-actions&logoColor=white)](https://github.com/signmotion/astronomical_measurements/actions)
+[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements/pulls)
+[![Issues](https://img.shields.io/github/issues/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements/issues)
+[![Pub Score](https://img.shields.io/pub/points/astronomical_measurements?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/astronomical_measurements/score)
 
 Keeping and converting astronomical measurements.
 Easy-to-use and [well-tested](https://github.com/signmotion/astronomical_measurements/tree/master/test) Dart package.
 Feel free to use it in your awesome projects.
 
-[![CodeFactor](https://codefactor.io/repository/github/signmotion/id_gen/badge)](https://codefactor.io/repository/github/signmotion/id_gen)
+[![CodeFactor](https://codefactor.io/repository/github/signmotion/astronomical_measurements/badge)](https://codefactor.io/repository/github/signmotion/astronomical_measurements)
 
 Share some ❤️ and star repo to support the project.
 
-_If you write an article about **IdGen** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README** 🤝_
+_If you write an article about **AstronomicalMeasurements** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README** 🤝_
 
 ## 🚀Usage
 
@@ -65,7 +65,7 @@ See also the folder `test` for the use cases.
 
 ## Whats New
 
-Look at [changelog](https://pub.dev/packages/id_gen/changelog).
+Look at [changelog](https://pub.dev/packages/astronomical_measurements/changelog).
 
 ## 🙋‍♀️🙋‍♂️Welcome
 
@@ -80,12 +80,12 @@ If this is your first contribution, I'll leave you with some of the best links I
 - [Summer Guide from Google](https://youtu.be/qGTQ7dEZXZc).
 - [CodeTriangle](https://codetriage.com) Free community tools for contributing to Open Source projects.
 
-The package **IdGen** is open-source, stable and well-tested. Development happens on
-[GitHub](https://github.com/signmotion/id_gen). Feel free to report issues
+The package **AstronomicalMeasurements** is open-source, stable and well-tested. Development happens on
+[GitHub](https://github.com/signmotion/astronomical_measurements). Feel free to report issues
 or create a pull-request there.
 
 General questions are best asked on
-[StackOverflow](https://stackoverflow.com/questions/tagged/id_gen).
+[StackOverflow](https://stackoverflow.com/questions/tagged/astronomical_measurements).
 
 And here is a curated list of how you can help:
 
@@ -99,7 +99,7 @@ And here is a curated list of how you can help:
 
 ## 🕧TODO (perhaps)
 
-Once you start using the **IdGen**, it will become easy to choose the functionality to contribute. But if you already get everything you need from this package but have some free time, let me write here what I have planned:
+Once you start using the **AstronomicalMeasurements**, it will become easy to choose the functionality to contribute. But if you already get everything you need from this package but have some free time, let me write here what I have planned:
 
 - A mass.
 
