@@ -3,28 +3,28 @@
 ![Cover - Astronomical Measurements](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/images/cover.webp)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Pub Package](https://img.shields.io/pub/v/astronomical_measurements.svg?logo=dart&logoColor=00b9fc&color=blue)](https://pub.dartlang.org/packages/astronomical_measurements)
-[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements)
-[![Publisher](https://img.shields.io/pub/publisher/astronomical_measurements)](https://pub.dev/publishers/syrokomskyi.com)
+[![Pub Package](https://img.shields.io/pub/v/id_gen.svg?logo=dart&logoColor=00b9fc&color=blue)](https://pub.dartlang.org/packages/id_gen)
+[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/id_gen?logo=github&logoColor=white)](https://github.com/signmotion/id_gen)
+[![Publisher](https://img.shields.io/pub/publisher/id_gen)](https://pub.dev/publishers/syrokomskyi.com)
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/astronomical_measurements/dart-ci.yml?logo=github-actions&logoColor=white)](https://github.com/signmotion/astronomical_measurements/actions)
-[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements/pulls)
-[![Issues](https://img.shields.io/github/issues/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements/issues)
-[![Pub Score](https://img.shields.io/pub/points/astronomical_measurements?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/astronomical_measurements/score)
+![SDK version](https://badgen.net/pub/sdk-version/id_gen)
+![Supported platforms](https://badgen.net/pub/flutter-platform/id_gen)
+![Supported SDKs](https://badgen.net/pub/dart-platform/id_gen)
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/id_gen/dart-ci.yml?logo=github-actions&logoColor=white)](https://github.com/signmotion/id_gen/actions)
+[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/id_gen?logo=github&logoColor=white)](https://github.com/signmotion/id_gen/pulls)
+[![Issues](https://img.shields.io/github/issues/signmotion/id_gen?logo=github&logoColor=white)](https://github.com/signmotion/id_gen/issues)
+[![Pub Score](https://img.shields.io/pub/points/id_gen?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/id_gen/score)
 
 Keeping and converting astronomical measurements.
 Easy-to-use and [well-tested](https://github.com/signmotion/astronomical_measurements/tree/master/test) Dart package.
 Feel free to use it in your awesome projects.
 
-| Android | iOS | Linux | MacOS | Web | Windows |              |
-| :-----: | :-: | :---: | :---: | :-: | :-----: | :----------- |
-|   ✅    | ✅  |  ✅   |  ✅   | ✅  |   ✅    | **platform** |
-
-| Dart | Flutter |         |
-| :--: | :-----: | :------ |
-|  ✅  |   ✅    | **SDK** |
+[![CodeFactor](https://codefactor.io/repository/github/signmotion/id_gen/badge)](https://codefactor.io/repository/github/signmotion/id_gen)
 
 Share some ❤️ and star repo to support the project.
+
+_If you write an article about **IdGen** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README** 🤝_
 
 ## Usage
 
