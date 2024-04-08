@@ -26,7 +26,7 @@ Share some ❤️ and star repo to support the project.
 
 _If you write an article about **IdGen** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README** 🤝_
 
-## Usage
+## 🚀Usage
 
 ### Converting
 
