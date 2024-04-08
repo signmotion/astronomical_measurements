@@ -63,6 +63,10 @@ See also the folder `test` for the use cases.
 - centimetre
 - millimetre
 
+## Whats New
+
+Look at [changelog](https://pub.dev/packages/id_gen/changelog).
+
 ## Welcome to Inspiration
 
 Requests and suggestions are warmly welcome.
