@@ -3,6 +3,11 @@
 All notable changes to the project `AstronomicalMeasurements` will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.6
+
+- Enhanced `README`: added an opening speech in Welcome section, What's New section, shorted sentences, added a link to [CodeTriangle](https://codetriage.com), replaced badges with supported platforms to <https://badgen.net/pub>, etc.
+- Upgraded dependencies.
+
 ## 0.2.5
 
 - Added a link to [CodeTriangle](https://codetriage.com) in `README`.
