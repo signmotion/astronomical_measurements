@@ -1,28 +1,28 @@
 # Astronomical Measurements
 
+![SDK version](https://badgen.net/pub/sdk-version/astronomical_measurements?style=for-the-badge)
+![Supported platforms](https://badgen.net/pub/flutter-platform/astronomical_measurements?style=for-the-badge)
+![Supported SDKs](https://badgen.net/pub/dart-platform/astronomical_measurements?style=for-the-badge)
+
 ![Cover - Astronomical Measurements](https://raw.githubusercontent.com/signmotion/astronomical_measurements/master/images/cover.webp)
 
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Pub Package](https://img.shields.io/pub/v/astronomical_measurements.svg?logo=dart&logoColor=00b9fc&color=blue)](https://pub.dartlang.org/packages/astronomical_measurements)
-[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements)
-[![Publisher](https://img.shields.io/pub/publisher/astronomical_measurements)](https://pub.dev/publishers/syrokomskyi.com)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Pub Package](https://img.shields.io/pub/v/astronomical_measurements.svg?logo=dart&logoColor=00b9fc&color=blue&style=for-the-badge)](https://pub.dartlang.org/packages/astronomical_measurements)
+[![Code Size](https://img.shields.io/github/languages/code-size/signmotion/astronomical_measurements?logo=github&logoColor=white&style=for-the-badge)](https://github.com/signmotion/astronomical_measurements)
+[![Publisher](https://img.shields.io/pub/publisher/astronomical_measurements?style=for-the-badge)](https://pub.dev/publishers/syrokomskyi.com)
 
-![SDK version](https://badgen.net/pub/sdk-version/astronomical_measurements)
-![Supported platforms](https://badgen.net/pub/flutter-platform/astronomical_measurements)
-![Supported SDKs](https://badgen.net/pub/dart-platform/astronomical_measurements)
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/astronomical_measurements/dart-ci.yml?logo=github-actions&logoColor=white)](https://github.com/signmotion/astronomical_measurements/actions)
-[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements/pulls)
-[![Issues](https://img.shields.io/github/issues/signmotion/astronomical_measurements?logo=github&logoColor=white)](https://github.com/signmotion/astronomical_measurements/issues)
-[![Pub Score](https://img.shields.io/pub/points/astronomical_measurements?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/astronomical_measurements/score)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/signmotion/astronomical_measurements/dart-ci.yml?logo=github-actions&logoColor=white&style=for-the-badge)](https://github.com/signmotion/astronomical_measurements/actions)
+[![Pull Requests](https://img.shields.io/github/issues-pr/signmotion/astronomical_measurements?logo=github&logoColor=white&style=for-the-badge)](https://github.com/signmotion/astronomical_measurements/pulls)
+[![Issues](https://img.shields.io/github/issues/signmotion/astronomical_measurements?logo=github&logoColor=white&style=for-the-badge)](https://github.com/signmotion/astronomical_measurements/issues)
+[![Pub Score](https://img.shields.io/pub/points/astronomical_measurements?logo=dart&logoColor=00b9fc&style=for-the-badge)](https://pub.dev/packages/astronomical_measurements/score)
 
 Keeping and converting astronomical measurements.
 Easy-to-use and [well-tested](https://github.com/signmotion/astronomical_measurements/tree/master/test) Dart package.
 Feel free to use it in your awesome project.
 
-[![CodeFactor](https://codefactor.io/repository/github/signmotion/astronomical_measurements/badge)](https://codefactor.io/repository/github/signmotion/astronomical_measurements)
+[![CodeFactor](https://codefactor.io/repository/github/signmotion/astronomical_measurements/badge?style=for-the-badge)](https://codefactor.io/repository/github/signmotion/astronomical_measurements)
 
-Share some ❤️ and star repo to support the project.
+Share some ❤️ and star repo to support the [Astronomical Measurements](https://github.com/signmotion/astronomical_measurements).
 
 _If you write an article about **AstronomicalMeasurements** or any of [these](https://pub.dev/packages?q=publisher%3Asyrokomskyi.com&sort=updated) packages, let me know and I'll post the URL of the article in the **README**_ 🤝
 
