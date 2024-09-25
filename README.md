@@ -105,4 +105,8 @@ Once you start using the **AstronomicalMeasurements**, it will become easy to ch
 
 It's just a habit of mine: writing down ideas that come to mind while working on a project. I confess that I rarely return to these notes. But now, hopefully, even if you don't have an idea yet, the above notes will help you choose the suitable "feature" and become a contributor to the open-source community.
 
-Created [with ❤️](https://syrokomskyi.com)
+Ready [for 🪙](https://webduet.de "The Modern Planet-Scale Site for Your Ambitions")
+
+Created [with ❤️](https://syrokomskyi.com "Andrii Syrokomskyi")
+
+[![fresher](https://img.shields.io/badge/maintained%20using-fresher-darkgreen.svg?style=for-the-badge)](https://github.com/signmotion/fresher "Keeps Projects Up to Date")
